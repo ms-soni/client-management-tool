@@ -1,0 +1,19 @@
+.nav-bar {
+
+    background-color: #555;
+    .menus {
+        .menu {
+            .menu-link {
+                color: #fff;
+                &:hover {
+                    background-color: #fff;
+                    color: #555;
+                }
+            }
+        }
+    }
+    .icon {
+        cursor: pointer;
+        color: #fff;
+    }
+}
