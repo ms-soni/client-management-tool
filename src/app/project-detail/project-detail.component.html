@@ -1,0 +1,23 @@
+<div *ngIf="project">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{ project.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div><strong>Contact Information:</strong> {{ project.contactInformation }}</div>
+            <div><strong>Services Provided:</strong> {{ project.servicesProvided }}</div>
+
+            <div *ngIf="project.resources.length > 0">
+                <h3>Resources Assigned:</h3>
+                <ul>
+                    <li *ngFor="let resource of project.resources">
+                        <strong>{{ resource.name }}</strong> - {{ resource.role }} (Status: {{ resource.status }})
+                    </li>
+                </ul>
+            </div>
+            <div *ngIf="project.resources.length === 0">
+                <p>No resources assigned to this project.</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
