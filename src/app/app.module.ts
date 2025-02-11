@@ -14,6 +14,13 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { ProfileComponent } from './profile/profile.component';
+import { provideHttpClient } from '@angular/common/http';
+import { MatTableModule } from "@angular/material/table";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatSortModule } from '@angular/material/sort';
+import { AddEditResourceComponent } from './resources/add-edit-resource/add-edit-resource.component';
+import { ResourceDetailsComponent } from './resources/resource-details/resource-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,9 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     ProjectsComponent,
     ResourcesComponent,
-    ProfileComponent
+    ProfileComponent,
+    AddEditResourceComponent,
+    ResourceDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,10 +40,15 @@ import { ProfileComponent } from './profile/profile.component';
     MatButtonModule,
     MatFormFieldModule,  // Add the MatFormFieldModule here
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
