@@ -1,1 +1,52 @@
-<p>resources works!</p>
+<div class="resource-header-container">
+    <div class="resource-header d-flex align-items-center justify-content-between">
+        <div class="title">
+            <h2>RESOURCES</h2>
+        </div>
+        <div class="page-actions">
+            <button class="btn btn-success" (click)="onAddResource()">+ Add</button>
+        </div>
+    </div>
+</div>
+<div class="resources-container">
+    @if (isLoadingResults) {
+        <div class="resource-loading-shade">
+          @if (isLoadingResults) {
+            <mat-spinner></mat-spinner>
+          }
+        </div>
+      }
+    <div class="resources-wrapper resources-table-container">
+        <table mat-table [dataSource]="resources" matSort matSortActive="created" matSortDirection="desc" class="mat-elevation-z8 demo-table">
+            @for (column of columns; track column) {
+            <ng-container [matColumnDef]="column.columnDef">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear [disabled]="column.disableSort">
+                    {{column.header}}
+                </th>
+                <td mat-cell *matCellDef="let row">
+                    {{column.cell(row)}}
+                </td>
+            </ng-container>
+            }
+            <ng-container [matColumnDef]="'action'">
+                <th mat-header-cell *matHeaderCellDef>
+                    Action
+                </th>
+                <td mat-cell *matCellDef="let row">
+                    <!-- <span class="icon view-icon">View</span> -->
+                    <a mat-icon-button class="home-link" (click)="onEditResource(row)">
+                        <mat-icon class="icon view-icon" >edit</mat-icon>
+                    </a>
+                    <a mat-icon-button class="home-link" (click)="onResourceDetails(row)">
+                        <mat-icon class="icon edit-icon">visibility</mat-icon>
+                    </a>
+                    <!-- <span class="icon edit-icon">Edit</span> -->
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    <mat-paginator [length]="resultsLength" [pageSize]="pageSize" aria-label="Select page of GitHub search results"></mat-paginator>
+</div>
