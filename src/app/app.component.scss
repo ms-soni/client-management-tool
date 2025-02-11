@@ -1,0 +1,77 @@
+/* Global header styling */
+mat-toolbar.app-header {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+mat-toolbar.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mat-icon {
+    overflow: visible;
+}
+
+.home-link,
+.profile-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.header-text {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.app-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+}
+
+.spacer {
+    flex: 0;
+}
+
+.profile-link {
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.content-container {
+    margin-top: 70px;
+    min-height: calc(100vh - 50px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Footer styling */
+footer {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    z-index: 1000;
+}
