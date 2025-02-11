@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,14 +9,14 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   viewProjects(): void {
-    //this.router.navigate(['/projects']);
+    this.router.navigate(['/projects']);
   }
 
   viewResources(): void {
-    //this.router.navigate(['/resources']);
+    this.router.navigate(['/resources']);
   }
 
 }
