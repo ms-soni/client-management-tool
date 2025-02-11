@@ -1,0 +1,58 @@
+/* Main container for the home page */
+.home-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Card container styling */
+.card-container {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.mat-mdc-card {
+    border-width: 2px;
+}
+
+/* Each card styling */
+.home-card {
+    width: 100%;
+    height: 250px;
+}
+
+/* Card header style */
+.mat-mdc-card-header {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Card value style */
+.card-value {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Button styling */
+.mat-mdc-raised-button {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer styling */
+footer {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

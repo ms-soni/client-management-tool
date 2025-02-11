@@ -1,0 +1,14 @@
+<header>
+    <nav class="nav-bar d-flex align-items-center justify-content-between">
+        <ul class="menus d-flex align-items-center">
+            <li class="menu" *ngFor="let menu of menus; let i = index;">
+                <a class="menu-link d-block p-3" [routerLink]="menu.url">{{menu.menu}}</a>
+            </li>
+        </ul>
+        <div class="action-icons-container">
+            <!-- ICONS to navigate to profile page and to logout the user -->
+            <span class="icon profile-icon"></span>
+            <span class="icon logout-icon p-3" (click)="onLogout()">Logout-icon</span>
+        </div>
+    </nav>
+</header>
