@@ -24,4 +24,12 @@ export class ProjectsComponent {
   viewProjectDetails(projectId: string): void {
     this.router.navigate(['/project', projectId]);
   }
+
+  public addProject() {
+    this.router.navigate(["/project/add"]);
+  }
+
+  public editProject(projectId: string): void {
+    this.router.navigate(["/project/edit/" + projectId]);
+  }
 }

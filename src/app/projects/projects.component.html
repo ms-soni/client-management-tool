@@ -1,11 +1,43 @@
+<div class="project-header-container">
+    <div class="project-header d-flex align-items-center justify-content-between">
+        <div class="title">
+            <h2>PROJECTS</h2>
+        </div>
+        <div class="page-actions">
+            <button class="btn btn-success" (click)="addProject()">+ Add</button>
+        </div>
+    </div>
+</div>
+
 <div class="projects-container">
-    <mat-card *ngFor="let project of projects" class="project-card">
-        <mat-card-header>
-            <mat-card-title>
-                <a href="javascript:void(0)" (click)="viewProjectDetails(project.id)">
-                    {{ project.name }}
-                </a>
-            </mat-card-title>
-        </mat-card-header>
-    </mat-card>
+    <ul class="projects-list">
+        <li class="project-item list-header">
+            <div class="project-header">
+                <div class="project-title">
+                    <span>Project Title</span>
+                </div>
+                <div class="action-title">
+                    <span>Action</span>
+                </div>
+            </div>
+        </li>
+        <li *ngFor="let project of projects; let i = index" class="project-item">
+            <div class="project-info">
+                <div>
+                    <span class="project-number">{{ i + 1 }}.</span>
+                    <a href="javascript:void(0)" (click)="viewProjectDetails(project.id)" class="project-link">
+                        {{ project.name }}
+                    </a>
+                </div>
+                <div class="project-actions">
+                    <a mat-icon-button class="home-link" (click)="editProject(project.id)">
+                        <mat-icon>edit</mat-icon>
+                    </a>
+                    <a mat-icon-button class="home-link" (click)="viewProjectDetails(project.id)">
+                        <mat-icon>visibility</mat-icon>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>

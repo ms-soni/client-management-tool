@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 import { provideHttpClient } from '@angular/common/http';
 import { MatTableModule } from "@angular/material/table";
 import { MatPaginatorModule } from "@angular/material/paginator";
@@ -23,6 +23,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatSortModule } from '@angular/material/sort';
 import { AddEditResourceComponent } from './resources/add-edit-resource/add-edit-resource.component';
 import { ResourceDetailsComponent } from './resources/resource-details/resource-details.component';
+import { AddEditProjectComponent } from './projects/add-edit-project/add-edit-project.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ResourceDetailsComponent } from './resources/resource-details/resource-
     ProfileComponent,
     ProjectDetailComponent,
     AddEditResourceComponent,
-    ResourceDetailsComponent
+    ResourceDetailsComponent,
+    AddEditProjectComponent
   ],
   imports: [
     BrowserModule,
