@@ -2,8 +2,13 @@
     {
         "id": "1",
         "name": "Project Alpha",
-        "contactInformation": "John Doe - johndoe@example.com",
+        "description": "Health insurance project",
+        "contactInformation": "alpha@example.com",
         "servicesProvided": "Web Development, UI/UX Design",
+        "status": "Active",
+        "startDate": "1/1/2025",
+        "endDate": "30/12/2025",
+        "billingStatus": "Billed",
         "resources": [
             {
                 "name": "Alice",
@@ -20,8 +25,13 @@
     {
         "id": "2",
         "name": "Project Beta",
-        "contactInformation": "Jane Smith - janesmith@example.com",
+        "description": "E-commerce project",
+        "contactInformation": "beta@example.com",
         "servicesProvided": "Mobile App Development, Backend API",
+        "status": "Active",
+        "startDate": "1/7/2025",
+        "endDate": "30/12/2026",
+        "billingStatus": "Pending",
         "resources": [
             {
                 "name": "Charlie",
@@ -38,8 +48,13 @@
     {
         "id": "3",
         "name": "Project Gamma",
-        "contactInformation": "George Brown - georgebrown@example.com",
+        "description": "Expense tracking project",
+        "contactInformation": "gamma@example.com",
         "servicesProvided": "Consulting, Cloud Infrastructure",
+        "status": "Inactive",
+        "startDate": "1/1/2024",
+        "endDate": "30/12/2024",
+        "billingStatus": "Billed",
         "resources": [
             {
                 "name": "Eve",

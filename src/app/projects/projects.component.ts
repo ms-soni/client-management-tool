@@ -25,6 +25,10 @@ export class ProjectsComponent {
     this.router.navigate(['/project', projectId]);
   }
 
+  viewProjectStatus(projectId: string): void {
+    this.router.navigate(['/project', projectId]);
+  }
+
   public addProject() {
     this.router.navigate(["/project/add"]);
   }
