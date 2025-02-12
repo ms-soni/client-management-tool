@@ -11,7 +11,7 @@
             "role": "Frontend Developer",
             "roleId": "500",
             "id": "123",
-            "status": "Assigned"
+            "status": "assigned"
         },
         {
             "name": "Bob",
@@ -22,7 +22,7 @@
             "role": "UI/UX Designer",
             "roleId": "600",
             "id": "567",
-            "status": "Assigned"
+            "status": "assigned"
         },
         {
             "name": "Charlie",
@@ -33,7 +33,7 @@
             "role": "Backend Developer",
             "roleId": "700",
             "id": "567",
-            "status": "Assigned"
+            "status": "assigned"
         },
         {
             "name": "David",
@@ -44,7 +44,7 @@
             "role": "Mobile App Developer",
             "roleId": "800",
             "id": "567",
-            "status": "Assigned"
+            "status": "assigned"
         },
         {
             "name": "Eve",
@@ -55,7 +55,7 @@
             "role": "Cloud Architect",
             "roleId": "900",
             "id": "345",
-            "status": "Assigned"
+            "status": "assigned"
         }
     ]
 }
