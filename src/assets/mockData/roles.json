@@ -1,0 +1,39 @@
+[
+    
+    {
+        "id": "500",
+        "role": "Frontend Developer"
+    },
+    {
+        "id": "600",
+        "role": "UI/UX Designer"
+    },
+    {
+        "id": "700",
+        "role": "Backend Developer"
+    },
+    {
+        "id": "800",
+        "role": "Mobile App Developer"
+    },
+    {
+        "id": "900",
+        "role": "Cloud Architect"
+    },
+    {
+        "id": "100",
+        "role": "Senior Software Engineer"
+    },
+    {
+        "id": "200",
+        "role": "Software Engineer"
+    },
+    {
+        "id": "300",
+        "role": "Module Lead"
+    },
+    {
+        "id": "400",
+        "role": "Tech Lead"
+    }
+]

@@ -1,1 +1,64 @@
-<p>add-edit-resource works!</p>
+<mat-card class="profile-card">
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+
+    <form *ngIf="resourceForm" [formGroup]="resourceForm" (ngSubmit)="onResourceAdd()">
+        <mat-card-content>
+            <div class="profile-info">
+                <div class="profile-picture">
+                    <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Profile Picture" class="profile-img">
+                </div>
+
+                <div class="basic-info">
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name">
+                        @if (resourceForm.get("name")?.invalid) {
+                            <mat-error>Name field is required</mat-error>
+                        }
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Role</mat-label>
+                        <mat-select formControlName="role">
+                            @for (role of rolesList; track role) {
+                                <mat-option [value]="role">{{role.role}}</mat-option>
+                            }
+                        </mat-select>
+                        @if (resourceForm.get("role")?.invalid) {
+                            <mat-error>Please select role</mat-error>
+                        }
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Address</mat-label>
+                        <textarea matInput formControlName="address"></textarea>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Project</mat-label>
+                        <mat-select formControlName="project">
+                            @for (project of projectsList; track project) {
+                                <mat-option [value]="project">{{project.name}}</mat-option>
+                            }
+                        </mat-select>
+                        @if (resourceForm.get("project")?.invalid) {
+                            <mat-error>Please select project</mat-error>
+                        }
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Project Description</mat-label>
+                        <textarea matInput formControlName="projectDescription"></textarea>
+                    </mat-form-field>
+
+                </div>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button type="submit" color="accent">{{isEditPage ? "Update" : "Add"}}</button>
+        </mat-card-actions>
+    </form>
+</mat-card>

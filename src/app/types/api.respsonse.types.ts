@@ -3,8 +3,11 @@ export interface ResourceType {
     address: string;
     projectName: string;
     projectDescription: string;
+    projectId: string;
     role: string;
+    roleId: string;
     id: string;
+    status: "assigned" | "unassigned";
 }
 
 export interface HTTPData<T> {

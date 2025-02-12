@@ -24,6 +24,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { AddEditResourceComponent } from './resources/add-edit-resource/add-edit-resource.component';
 import { ResourceDetailsComponent } from './resources/resource-details/resource-details.component';
 import { AddEditProjectComponent } from './projects/add-edit-project/add-edit-project.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { AddEditProjectComponent } from './projects/add-edit-project/add-edit-pr
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     MatToolbarModule,
@@ -50,7 +54,8 @@ import { AddEditProjectComponent } from './projects/add-edit-project/add-edit-pr
     MatTableModule,
     MatProgressSpinnerModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule
   ],
   providers: [
     provideAnimationsAsync(),
