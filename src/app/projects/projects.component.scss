@@ -1,3 +1,92 @@
-.project-card {
-    margin-bottom: 20px;
+.projects-container {
+    list-style: none;
+}
+
+.projects-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-number {
+    margin-right: 5px;
+    text-align: center;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.list-header {
+    background-color: #f5f5f5;
+}
+
+.project-item:hover {
+    background-color: #f5f5f5;
+}
+
+.project-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    flex-grow: 1;
+}
+
+.action-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-right: 30px;
+}
+
+.project-link {
+    color: #333;
+    text-decoration: none;
+
+    &:hover {
+        color: #4caf50;
+        text-decoration: underline;
+    }
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+}
+
+.project-actions a {
+    margin-left: 10px;
+    color: #5f6368;
+}
+
+.project-actions a mat-icon {
+    font-size: 20px;
+}
+
+.project-actions a:hover {
+    color: #007bff;
 }

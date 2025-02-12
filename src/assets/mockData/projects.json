@@ -1,36 +1,51 @@
-{
-    "status": 200,
-    "error": null,
-    "data": [
-        {
-            "projectName": "Project Name 1",
-            "projectDescription": "Project description 1",
-            "id": "101"
-        },
-        {
-            "projectName": "Project Name 2",
-            "projectDescription": "Project description 2",
-            "id": "104"
-        },
-        {
-            "projectName": "Project Name 3",
-            "projectDescription": "Project description 3",
-            "id": "103"
-        },
-        {
-            "projectName": "Project Name 4",
-            "projectDescription": "Project description 4",
-            "id": "104"
-        },
-        {
-            "projectName": "Project Name 5",
-            "projectDescription": "Project description 5",
-            "id": "105"
-        },
-        {
-            "projectName": "Project Name 6",
-            "projectDescription": "Project description 6",
-            "id": "106"
-        }       
-    ]
-}
+[
+    {
+        "id": "1",
+        "name": "Project Alpha",
+        "contactInformation": "John Doe - johndoe@example.com",
+        "servicesProvided": "Web Development, UI/UX Design",
+        "resources": [
+            {
+                "name": "Alice",
+                "role": "Frontend Developer",
+                "status": "Assigned"
+            },
+            {
+                "name": "Bob",
+                "role": "UI/UX Designer",
+                "status": "Assigned"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Project Beta",
+        "contactInformation": "Jane Smith - janesmith@example.com",
+        "servicesProvided": "Mobile App Development, Backend API",
+        "resources": [
+            {
+                "name": "Charlie",
+                "role": "Backend Developer",
+                "status": "Assigned"
+            },
+            {
+                "name": "David",
+                "role": "Mobile App Developer",
+                "status": "Assigned"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Project Gamma",
+        "contactInformation": "George Brown - georgebrown@example.com",
+        "servicesProvided": "Consulting, Cloud Infrastructure",
+        "resources": [
+            {
+                "name": "Eve",
+                "role": "Cloud Architect",
+                "status": "Assigned"
+            }
+        ]
+    }
+]
