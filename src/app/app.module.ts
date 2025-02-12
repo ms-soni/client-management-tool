@@ -26,7 +26,9 @@ import { ResourceDetailsComponent } from './resources/resource-details/resource-
 import { AddEditProjectComponent } from './projects/add-edit-project/add-edit-project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import {MatChipsModule} from '@angular/material/chips';
     MatPaginatorModule,
     MatSortModule,
     MatSelectModule,
-    MatChipsModule
+    MatChipsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
     provideAnimationsAsync(),
