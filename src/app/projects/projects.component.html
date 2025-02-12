@@ -1,5 +1,5 @@
 <div class="project-header-container">
-    <div class="project-header d-flex align-items-center justify-content-between">
+    <div class="project-header page-header align-items-center justify-content-between">
         <div class="title">
             <h2>PROJECTS</h2>
         </div>
@@ -16,6 +16,9 @@
                 <div class="project-title">
                     <span>Project Title</span>
                 </div>
+                <div class="project-status">
+                    <span>Project Status</span>
+                </div>
                 <div class="action-title">
                     <span>Action</span>
                 </div>
@@ -28,6 +31,11 @@
                     <a href="javascript:void(0)" (click)="viewProjectDetails(project.id)" class="project-link">
                         {{ project.name }}
                     </a>
+                </div>
+                <div>
+                    <span href="javascript:void(0)" (click)="viewProjectStatus(project.id)">
+                        {{ project.status }}
+                    </span>
                 </div>
                 <div class="project-actions">
                     <a mat-icon-button class="home-link" (click)="editProject(project.id)">

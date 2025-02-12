@@ -49,11 +49,19 @@
     width: 100%;
 }
 
-.project-title {
+.page-header {
+    display: block;
+}
+
+.page-actions {
+    margin-bottom: 10px;
+}
+
+.project-title,
+.project-status {
     font-size: 18px;
     font-weight: 500;
     color: #333;
-    flex-grow: 1;
 }
 
 .action-title {

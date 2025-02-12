@@ -1,23 +1,30 @@
-<div *ngIf="project">
-    <mat-card>
-        <mat-card-header>
-            <mat-card-title>{{ project.name }}</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            <div><strong>Contact Information:</strong> {{ project.contactInformation }}</div>
-            <div><strong>Services Provided:</strong> {{ project.servicesProvided }}</div>
+<div class="project-header-container">
+    <div class="project-header">
+        <div class="title">
+            <h2>PROJECT DETAILS</h2>
+        </div>
+    </div>
+</div>
 
-            <div *ngIf="project.resources.length > 0">
-                <h3>Resources Assigned:</h3>
-                <ul>
-                    <li *ngFor="let resource of project.resources">
-                        <strong>{{ resource.name }}</strong> - {{ resource.role }} (Status: {{ resource.status }})
-                    </li>
-                </ul>
-            </div>
-            <div *ngIf="project.resources.length === 0">
-                <p>No resources assigned to this project.</p>
-            </div>
-        </mat-card-content>
-    </mat-card>
+<div class="projects-container" *ngIf="project">
+    <div class="projects-table-container">
+        <table mat-table [dataSource]="projectDetails" class="mat-elevation-z8 demo-table">
+            <ng-container matColumnDef="key">
+                <th mat-header-cell *matHeaderCellDef>Title</th>
+                <td mat-cell *matCellDef="let element">{{ element.key }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="value">
+                <th mat-header-cell *matHeaderCellDef>Details</th>
+                <td mat-cell *matCellDef="let element">{{ element.value }}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>
+
+<div *ngIf="!project">
+    <p>No project found with this ID.</p>
 </div>
