@@ -1,1 +1,36 @@
-<p>resource-details works!</p>
+<mat-card class="profile-card" appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <div class="resource-profile-container">
+            <div class="profile-info">
+                <div class="profile-picture">
+                    <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Profile Picture" class="profile-img">
+                </div>
+            </div>
+
+            <div class="details-container">
+                <div class="card-field"><strong>Name : </strong> {{ resourceData?.name }}</div>
+                <div class="card-field"><strong>Role : </strong> {{ resourceData?.role }}</div>
+                <div class="card-field"><strong>Project : </strong> {{ resourceData?.projectName }}</div>
+                <div class="card-field"><strong>Status : </strong> {{ resourceData?.status }}</div>
+                <div class="card-field">
+                    <strong>Skills : </strong>
+                    <span class="chips">
+                        <mat-chip-set aria-label="Fish selection" class="chip-sets">
+                            @for (skill of resourceData?.skills; track skill) {
+                                <mat-chip class="chip" color="accent" selected>{{skill}}</mat-chip>
+                            }
+                        </mat-chip-set>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="onBackToLists()">Back</button>
+    </mat-card-actions>
+</mat-card>

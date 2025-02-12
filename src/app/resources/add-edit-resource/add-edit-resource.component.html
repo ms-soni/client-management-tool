@@ -58,7 +58,8 @@
         </mat-card-content>
 
         <mat-card-actions>
-            <button mat-raised-button type="submit" color="accent">{{isEditPage ? "Update" : "Add"}}</button>
+            <button mat-raised-button type="submit" color="accent" class="add-btn">{{isEditPage ? "Update" : "Add"}}</button>
+            <button mat-flat-button type="button" color="accent" (click)="onBackToLists()">Cancel</button>
         </mat-card-actions>
     </form>
 </mat-card>

@@ -71,6 +71,10 @@ export class AddEditResourceComponent implements OnInit {
     }
   }
 
+  public onBackToLists() {
+    this.router.navigate(["/resources"]);
+  }
+
   private buildResourceForm() {
     const role = this.rolesList.find(r => r.id === this.resourceData?.roleId);
     const project = this.projectsList.find(p => p.id === this.resourceData?.projectId);
