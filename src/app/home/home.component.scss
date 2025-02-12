@@ -1,26 +1,16 @@
-/* Main container for the home page */
+/* Style for the Home Component */
 .home-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 20px;
     margin-top: 20px;
-}
-
-/* Card container styling */
-.card-container {
-    width: 300px;
-    display: flex;
-    justify-content: center;
-}
-
-.mat-mdc-card {
-    border-width: 2px;
+    flex-wrap: wrap;
 }
 
 /* Each card styling */
 .home-card {
-    width: 100%;
+    width: 300px;
     height: 250px;
 }
 
@@ -28,6 +18,7 @@
 .mat-mdc-card-header {
     background-color: #4caf50;
     color: white;
+    padding: 8px;
 }
 
 /* Card value style */
@@ -44,15 +35,4 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Footer styling */
-footer {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }

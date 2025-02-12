@@ -1,1 +1,11 @@
-<p>projects works!</p>
+<div class="projects-container">
+    <mat-card *ngFor="let project of projects" class="project-card">
+        <mat-card-header>
+            <mat-card-title>
+                <a href="javascript:void(0)" (click)="viewProjectDetails(project.id)">
+                    {{ project.name }}
+                </a>
+            </mat-card-title>
+        </mat-card-header>
+    </mat-card>
+</div>

@@ -1,0 +1,36 @@
+{
+    "status": 200,
+    "error": null,
+    "data": [
+        {
+            "projectName": "Project Name 1",
+            "projectDescription": "Project description 1",
+            "id": "101"
+        },
+        {
+            "projectName": "Project Name 2",
+            "projectDescription": "Project description 2",
+            "id": "104"
+        },
+        {
+            "projectName": "Project Name 3",
+            "projectDescription": "Project description 3",
+            "id": "103"
+        },
+        {
+            "projectName": "Project Name 4",
+            "projectDescription": "Project description 4",
+            "id": "104"
+        },
+        {
+            "projectName": "Project Name 5",
+            "projectDescription": "Project description 5",
+            "id": "105"
+        },
+        {
+            "projectName": "Project Name 6",
+            "projectDescription": "Project description 6",
+            "id": "106"
+        }       
+    ]
+}
