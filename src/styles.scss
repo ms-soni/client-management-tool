@@ -24,7 +24,7 @@ body {
 }
 
 .mat-mdc-card-header {
-    padding: 8px;
+    padding: 8px !important;
     margin-bottom: 20px;
 }
 
@@ -59,4 +59,9 @@ mat-card-header {
 mat-card-actions {
     display: flex;
     justify-content: center;
+}
+
+.card-field {
+    padding: 10px 0;
+    font-size: 18px;
 }

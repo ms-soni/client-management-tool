@@ -8,6 +8,7 @@ export interface ResourceType {
     roleId: string;
     id: string;
     status: "assigned" | "unassigned";
+    skills?: string[] | null;
 }
 
 export interface HTTPData<T> {
