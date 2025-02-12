@@ -15,3 +15,48 @@ body {
     margin: 0.25rem 0.25rem 0.25rem 0;
     cursor: pointer;
 }
+
+/* Styling for the profile card */
+.profile-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.mat-mdc-card-header {
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+mat-card-header {
+    background-color: #4caf50;
+    color: white;
+}
+
+.profile-picture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4caf50;
+}
+
+.basic-info {
+    margin-top: 20px;
+}
+
+.info-field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Styling for the Edit Profile button */
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+}

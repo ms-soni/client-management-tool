@@ -3,58 +3,59 @@
     "error": null,
     "data": [
         {
-            "name": "Resource 1",
+            "name": "Alice",
             "address": "Address 1",
-            "projectName": "Project Name 1",
+            "projectName": "Project Alpha",
             "projectDescription": "Project description 1",
-            "projectId": "101",
-            "role": "Senior Software Engineer",
-            "id": "123"
+            "projectId": "1",
+            "role": "Frontend Developer",
+            "roleId": "500",
+            "id": "123",
+            "status": "assigned"
         },
         {
-            "name": "Resource 3",
+            "name": "Bob",
             "address": "Address 3",
-            "projectName": "Project Name 3",
+            "projectName": "Project Alpha",
             "projectDescription": "Project description 3",
-            "projectId": "103",
-            "role": "Module Lead",
-            "id": "567"
+            "projectId": "1",
+            "role": "UI/UX Designer",
+            "roleId": "600",
+            "id": "567",
+            "status": "assigned"
         },
         {
-            "name": "Resource 6",
+            "name": "Charlie",
+            "address": "Address 3",
+            "projectName": "Project Beta",
+            "projectDescription": "Project description 3",
+            "projectId": "2",
+            "role": "Backend Developer",
+            "roleId": "700",
+            "id": "567",
+            "status": "assigned"
+        },
+        {
+            "name": "David",
+            "address": "Address 3",
+            "projectName": "Project Beta",
+            "projectDescription": "Project description 3",
+            "projectId": "2",
+            "role": "Mobile App Developer",
+            "roleId": "800",
+            "id": "567",
+            "status": "assigned"
+        },
+        {
+            "name": "Eve",
             "address": "Address 6",
-            "projectName": "Project Name 6",
+            "projectName": "Project Gamma",
             "projectDescription": "Project description 6",
-            "projectId": "106",
-            "role": "Tech Lead",
-            "id": "345"
-        },
-        {
-            "name": "Resource 5",
-            "address": "Address 5",
-            "projectName": "Project Name 5",
-            "projectDescription": "Project description 5",
-            "projectId": "105",
-            "role": "Senior Software Engineer",
-            "id": "444"
-        },
-        {
-            "name": "Resource 4",
-            "address": "Address 4",
-            "projectName": "Project Name 4",
-            "projectDescription": "Project description 4",
-            "projectId": "104",
-            "role": "Software Engineer",
-            "id": "333"
-        },
-        {
-            "name": "Resource 2",
-            "address": "Address 2",
-            "projectName": "Project Name 2",
-            "projectDescription": "Project description 2",
-            "projectId": "104",
-            "role": "Senior Software Engineer",
-            "id": "234"
+            "projectId": "3",
+            "role": "Cloud Architect",
+            "roleId": "900",
+            "id": "345",
+            "status": "assigned"
         }
     ]
 }
