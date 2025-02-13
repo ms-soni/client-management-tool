@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Project } from '../models/project.model';
+import { ProjectType } from '../types/api.respsonse.types';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -16,19 +17,20 @@ export class ProjectService {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-  // Get project by ID
-  getProjectById(id: string): Observable<Project> {
-    return this.http.get<Project>(`${this.apiUrl}/${id}`);
+
+
+  getProjectById(projectId: string): Observable<ProjectType | null> {
+    return this.http.get<ProjectType[]>('/assets/mockData/projects.json').pipe(
+      map((projects: ProjectType[]) => projects.find((project: ProjectType) => project.id === projectId) || null)  // Return null if not found
+    );
   }
 
-  // Update project
-  updateProject(id: string, project: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${id}`, project);
+  addProject(projectData: ProjectType) {
+    return this.http.post(this.apiUrl, projectData);
   }
 
-  // Create project
-  createProject(project: any): Observable<any> {
-    return this.http.post(this.apiUrl, project);
+  updateProject(projectId: string, projectData: ProjectType) {
+    return this.http.put(`${this.apiUrl}/${projectId}`, projectData);
   }
 }
 

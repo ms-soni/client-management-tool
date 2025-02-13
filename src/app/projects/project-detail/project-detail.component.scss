@@ -1,3 +1,11 @@
 .mat-mdc-cell {
     border-bottom-color: #ddd;
 }
+
+.mat-mdc-unelevated-button:not(:disabled) {
+    background-color: #4caf50;
+}
+
+mat-card-actions {
+    padding-bottom: 30px;
+}

@@ -11,8 +11,15 @@
             "role": "Frontend Developer",
             "roleId": "500",
             "id": "123",
-            "status": "assigned",
-            "skills": ["HTML5", "CSS3", "JavaScript", "ReactJs", "Angular", "TypeScript"]
+            "status": "Assigned",
+            "skills": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "ReactJs",
+                "Angular",
+                "TypeScript"
+            ]
         },
         {
             "name": "Bob",
@@ -23,8 +30,14 @@
             "role": "UI/UX Designer",
             "roleId": "600",
             "id": "567",
-            "status": "assigned",
-            "skills": ["HTML5", "CSS3", "Photoshop", "Figma", "AdobeXD"]
+            "status": "Assigned",
+            "skills": [
+                "HTML5",
+                "CSS3",
+                "Photoshop",
+                "Figma",
+                "AdobeXD"
+            ]
         },
         {
             "name": "Charlie",
@@ -35,8 +48,19 @@
             "role": "Backend Developer",
             "roleId": "700",
             "id": "567",
-            "status": "assigned",
-            "skills": ["HTML5", "CSS3", "JavaScript", "NodeJs", "Java", "Python", "dJango", "MongoDB", "SQL", "MySQL"]
+            "status": "Assigned",
+            "skills": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "NodeJs",
+                "Java",
+                "Python",
+                "dJango",
+                "MongoDB",
+                "SQL",
+                "MySQL"
+            ]
         },
         {
             "name": "David",
@@ -47,8 +71,15 @@
             "role": "Mobile App Developer",
             "roleId": "800",
             "id": "567",
-            "status": "assigned",
-            "skills": ["HTML5", "CSS3", "JavaScript", "React Native", "ReactJs", "TypeScript"]
+            "status": "Assigned",
+            "skills": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "React Native",
+                "ReactJs",
+                "TypeScript"
+            ]
         },
         {
             "name": "Eve",
@@ -59,8 +90,14 @@
             "role": "Cloud Architect",
             "roleId": "900",
             "id": "345",
-            "status": "assigned",
-            "skills": ["AWS", "Azure", "Python", "Java", "Docker"]
+            "status": "Assigned",
+            "skills": [
+                "AWS",
+                "Azure",
+                "Python",
+                "Java",
+                "Docker"
+            ]
         }
     ]
 }

@@ -1,69 +1,74 @@
-<form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
-    <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Project Name</mat-label>
-        <input matInput formControlName="name" placeholder="Enter project name" />
-        <mat-error *ngIf="projectForm.controls['name'].hasError('required')">Project Name is required</mat-error>
-    </mat-form-field>
+<mat-card class="profile-card">
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
 
-    <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Description</mat-label>
-        <textarea matInput formControlName="description" placeholder="Enter project description"></textarea>
-        <mat-error *ngIf="projectForm.controls['description'].hasError('required')">Description is required</mat-error>
-    </mat-form-field>
+    <form *ngIf="projectForm" [formGroup]="projectForm" (ngSubmit)="onProjectAdd()">
+        <mat-card-content>
+            <div class="profile-info">
+                <div class="basic-info">
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Project Name</mat-label>
+                        <input matInput formControlName="name">
+                        <mat-error *ngIf="projectForm.get('name')?.invalid">Project name is required</mat-error>
+                    </mat-form-field>
 
-    <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Contact Information</mat-label>
-        <input matInput formControlName="contactInformation" placeholder="Enter contact email" />
-        <mat-error *ngIf="projectForm.controls['contactInformation'].hasError('required')">Contact Information is
-            required</mat-error>
-        <mat-error *ngIf="projectForm.controls['contactInformation'].hasError('email')">Please enter a valid
-            email</mat-error>
-    </mat-form-field>
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Description</mat-label>
+                        <textarea matInput formControlName="description"></textarea>
+                    </mat-form-field>
 
-    <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Services Provided</mat-label>
-        <input matInput formControlName="servicesProvided" placeholder="Enter services provided" />
-        <mat-error *ngIf="projectForm.controls['servicesProvided'].hasError('required')">Services Provided is
-            required</mat-error>
-    </mat-form-field>
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Contact Information</mat-label>
+                        <input matInput formControlName="contactInformation">
+                    </mat-form-field>
 
-    <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Status</mat-label>
-        <mat-select formControlName="status">
-            <mat-option value="Active">Active</mat-option>
-            <mat-option value="Inactive">Inactive</mat-option>
-            <mat-option value="Pending">Pending</mat-option>
-        </mat-select>
-        <mat-error *ngIf="projectForm.controls['status'].hasError('required')">Status is required</mat-error>
-    </mat-form-field>
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Services Provided</mat-label>
+                        <input matInput formControlName="servicesProvided">
+                    </mat-form-field>
 
-    <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Start Date</mat-label>
-        <input matInput [matDatepicker]="startDate" formControlName="startDate" placeholder="Select start date" />
-        <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
-        <mat-datepicker #startDate></mat-datepicker>
-        <mat-error *ngIf="projectForm.controls['startDate'].hasError('required')">Start Date is required</mat-error>
-    </mat-form-field>
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Status</mat-label>
+                        <mat-select formControlName="status">
+                            <mat-option value="Active">Active</mat-option>
+                            <mat-option value="Inactive">Inactive</mat-option>
+                        </mat-select>
+                    </mat-form-field>
 
-    <mat-form-field appearance="fill" class="full-width">
-        <mat-label>End Date</mat-label>
-        <input matInput [matDatepicker]="endDate" formControlName="endDate" placeholder="Select end date" />
-        <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
-        <mat-datepicker #endDate></mat-datepicker>
-        <mat-error *ngIf="projectForm.controls['endDate'].hasError('required')">End Date is required</mat-error>
-    </mat-form-field>
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Start Date</mat-label>
+                        <input matInput [matDatepicker]="startDatePicker" formControlName="startDate">
+                        <mat-datepicker #startDatePicker></mat-datepicker>
+                    </mat-form-field>
 
-    <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Billing Status</mat-label>
-        <mat-select formControlName="billingStatus">
-            <mat-option value="Billed">Billed</mat-option>
-            <mat-option value="Pending">Pending</mat-option>
-        </mat-select>
-        <mat-error *ngIf="projectForm.controls['billingStatus'].hasError('required')">Billing Status is
-            required</mat-error>
-    </mat-form-field>
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>End Date</mat-label>
+                        <input matInput [matDatepicker]="endDatePicker" formControlName="endDate">
+                        <mat-datepicker #endDatePicker></mat-datepicker>
+                    </mat-form-field>
 
-    <div class="form-actions">
-        <button mat-raised-button color="primary" type="submit" [disabled]="projectForm.invalid">Submit</button>
-    </div>
-</form>
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Billing Status</mat-label>
+                        <mat-select formControlName="billingStatus">
+                            <mat-option value="Billed">Billed</mat-option>
+                            <mat-option value="Pending">Pending</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="info-field">
+                        <mat-label>Resources</mat-label>
+                        <input matInput [value]="resourceNames">
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button type="submit" color="accent" class="add-btn">
+                {{isEditPage ? "Update" : "Add"}}
+            </button>
+            <button mat-flat-button type="button" color="accent" (click)="onBackToLists()">Cancel</button>
+        </mat-card-actions>
+    </form>
+</mat-card>
