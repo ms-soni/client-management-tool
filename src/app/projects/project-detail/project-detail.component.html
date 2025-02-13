@@ -25,6 +25,10 @@
     </div>
 </div>
 
+<mat-card-actions>
+    <button mat-flat-button type="button" class="back-button" color="accent" (click)="onBackToLists()">Back</button>
+</mat-card-actions>
+
 <div *ngIf="!project">
     <p>No project found with this ID.</p>
 </div>

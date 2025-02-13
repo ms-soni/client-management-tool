@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectService } from '../../services/project.service';
 
 @Component({
@@ -31,6 +31,7 @@ export class ProjectDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private projectService: ProjectService
   ) { }
 
@@ -67,5 +68,9 @@ export class ProjectDetailComponent implements OnInit {
       return value.map((resource: any) => `${resource.name} (${resource.role})`).join(', ');
     }
     return value;
+  }
+
+  public onBackToLists() {
+    this.router.navigate(["/projects"]);
   }
 }

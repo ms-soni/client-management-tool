@@ -7,7 +7,7 @@
         "servicesProvided": "Web Development, UI/UX Design",
         "status": "Active",
         "startDate": "1/1/2025",
-        "endDate": "30/12/2025",
+        "endDate": "10/12/2025",
         "billingStatus": "Billed",
         "resources": [
             {
@@ -30,7 +30,7 @@
         "servicesProvided": "Mobile App Development, Backend API",
         "status": "Active",
         "startDate": "1/7/2025",
-        "endDate": "30/12/2026",
+        "endDate": "1/12/2026",
         "billingStatus": "Pending",
         "resources": [
             {
@@ -53,7 +53,7 @@
         "servicesProvided": "Consulting, Cloud Infrastructure",
         "status": "Inactive",
         "startDate": "1/1/2024",
-        "endDate": "30/12/2024",
+        "endDate": "1/12/2024",
         "billingStatus": "Billed",
         "resources": [
             {
